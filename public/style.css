@@ -123,7 +123,7 @@ form ul li {
 
 .inner-container img.profile_picture{
     width: 70%;
-    border-radius: 50%;
+    border-radius: 15%;
     display: block;
     margin: auto;
     border: 5px solid white;
