@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEXA</title>
+    <link rel="shortcut icon" type="/image/png" href="/public/img/favicon.png" />
+    <link type="text/css" rel="stylesheet" href="/public/style.css">
+</head>
+
+<body>
+    <div class="logo">
+        <img src="/public/img/logo.png" alt="log">
+    </div>
+    <h1>My social network</h1>
+    <div class="main-wrapper">
+        <form id='loginForm' action="">
+            <h2>Login</h2>
+            <div>
+                <label for="">Email</label>
+                <input type="email" name="login_email" id="login_email" placeholder="petar.petrovic@gmail.com">
+            </div>
+            <div>
+                <label for="">Password</label>
+                <input type="password" name="login_password" id="login_password" placeholder='password'>
+            </div>
+            <div>
+                <button>Login</button>
+
+            </div>
+
+        </form>
+
+
+    </div>
+
+    <div class="no-acc-register">
+        <p>You don't have an account?</p>
+        <button id="registerHere">Register here!</button>
+    </div>
+
+
+    <div class="custom-modal">
+        <button id="closeModal">X</button>
+
+        <form id="registrationForm" action="">
+            <h2>Registration</h2>
+
+            <div>
+                <label for="">Username:*</label>
+                <input id='username' type="text" name="username" placeholder="petar.petrovic1">
+            </div>
+            <div>
+                <label for="">Email:*</label>
+                <input id='email' type="email" name="email" placeholder="petar.petrovic1@gmail.com">
+            </div>
+            <div>
+                <label for="">Password:*</label>
+                <input id='password' type="password" name="password" placeholder="********">
+            </div>
+            <div>
+                <label for="">Repeat password:*</label>
+                <input id='repeat_password' type="password" name="repeat_password" placeholder="********">
+            </div>
+
+            <div>
+                <button type="submit" id="register">Register</button>
+            </div>
+        </form>
+
+
+    </div>
+    <script src="public/js/Validator.js"></script>
+    <script src="public/js/Session.js"></script>
+    <script src="public/js/Users.js"></script>
+    <script src="public/js/app.js"></script>
+</body>
+
+</html>
