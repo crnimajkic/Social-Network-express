@@ -148,17 +148,17 @@ async function getAllPosts() {
         async function getPostUser() {
 
             let user = new User()
-            user = await user.get(post.user_id)
-
+            let user_that_posted = await user.get(post.user_id)
+            
             let comments = new Comment();
 
-            comments = await comments.getComments(post.id)
+            post_comments = await comments.getComments(post.id)
 
             let comment_html = ''
 
-            if (comments.length > 0) {
-                comments.forEach(comment => {
-                    comment_html += `<div class="sigle-comment">${comment["content"]}</div>`
+            if (post_comments.length > 0) {
+                post_comments.forEach(comment => {
+                    comment_html += `<div class="single-comment"><span class="comment_username"><i class="fas fa-comment-dots"></i> ${comment.username}</span> : ${comment["content"]}</div>`
                 })
             }
 
@@ -175,9 +175,9 @@ async function getAllPosts() {
                                                                      <div class="single-post-content">${post.content}</div>
                                                                     
                                                                      <div class ="post-actions">
-                                                                     <p><b>Author:</b>${user.username}</p>
+                                                                     <p><b>Author:</b>${user_that_posted.username}</p>
                                                                         <div>
-                                                                        <button onclick="likePost(this)" class ="likePostJS like-btn"><span>${post.likes}</span>Likes</button>
+                                                                        <button onclick="likePost(this)" class ="likePostJS like-btn"><span>${post.likes}</span> Likes</button>
                                                                         <button class = "comment-btn" onclick="commentPost(this)">Comments</button>
                                                                         ${delete_post_html}
                                                                         </div>
@@ -188,6 +188,7 @@ async function getAllPosts() {
                                                                             <button onclick="commentPostSubmit(event)">Comment</button>
                                                                         </form>
                                                                         <div class="all-coments">
+                                                                        <span class = "comments-label">Comments:</span>
                                                                         ${comment_html}
                                                                         </div>
                                                                      </div>
@@ -212,8 +213,6 @@ const commentPostSubmit = event => {
     if (comment_value == '') {
         return
     } else {
-        main_post_el.querySelector('.post-comments').innerHTML += `<div class="single-comment">${comment_value}</div>`
-
         // so you can comment only once per pagerefresh
         btn.setAttribute('disabled', 'true')
 
@@ -221,6 +220,10 @@ const commentPostSubmit = event => {
         comment.content = comment_value
         comment.user_id = sessionCookies
         comment.post_id = post_id
+        comment.username = document.querySelector('#profile_username').innerText
+
+        
+        main_post_el.querySelector('.post-comments').innerHTML += `<div class="single-comment"><span class="comment_username"><i class="fas fa-comment-dots"></i> ${comment.username}</span> : ${comment_value}</div>`
 
         comment.create()
     }
@@ -240,7 +243,7 @@ const removeMyPost = btn => {
 
 
 }
-//liking post   ////////////////////////////////////// NOT prooved
+///////liking post   /////////////
 async function likePost(btn) {
 
     let main_post_el = btn.closest('.single-post')
@@ -286,7 +289,4 @@ const commentPost = btn => {
 
 /// TO DOO 
 
-
-/// 1 . IF NOTHING IS WRITEN IN COMMENT OR POST, DO NOT POST IT /// done
-
-/// 2 . IF REGISTRATION EMAIL OR USERNAME IS SAME AS ANY OF THE USERS IN DATA BASE, PREVENT
+/// 1 . IF REGISTRATION EMAIL OR USERNAME IS SAME AS ANY OF THE USERS IN DATA BASE, PREVENT

@@ -3,12 +3,14 @@ class Comment{
     user_id = ''
     content = ''
     api_url = 'https://62d5dfad15ad24cbf2ce5ec2.mockapi.io'
+    username = ''
 
     create(){
         let data = {
             post_id: this.post_id,
             user_id: this.user_id,
-            content: this.content
+            content: this.content,
+            username: this.username
         }
 
         data = JSON.stringify(data)
@@ -41,7 +43,7 @@ class Comment{
                 i++
             }
         });
-        console.log(post_comments, `commets after getCommets metode`)
+    
         return post_comments
         
     }

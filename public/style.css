@@ -34,8 +34,14 @@ button{
 .main-wrapper {
     max-width: 650px;
     margin: auto;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: #bda9c346;;
     padding: 50px;
+    border-radius: 10px;
+}
+.indexh1{
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 30px;
 }
 
 form div {
@@ -58,6 +64,10 @@ form div button{
     cursor: pointer;
     padding: 10px 30px;
     font-size: 18px;
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 1px 4px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 1px 4px 2px rgba(0,0,0,0.75);
+    box-shadow: 2px 1px 4px 2px rgba(0,0,0,0.75);
 }
 form ul{
     list-style: none;
@@ -68,24 +78,25 @@ form ul li {
 
 .no-acc-register{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .no-acc-register button{
     padding: 15px;
     font-size: 18px;
+    border-radius: 10px;
 }
 
 .no-acc-register p {
     font-size: 22px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .custom-modal {
     display: none;
-    background-color: black;
-    box-shadow: rgba(248, 248, 248, 0.8) 0 0 1000px 1000px;
-    max-width: 650px;
+    background-color: rgb(31 22 44);
+    box-shadow: #bda9c346 0 0 1000px 1000px;
+    max-width: 680px;
     margin: auto;
     padding: 50px;
     position: absolute;
@@ -93,6 +104,7 @@ form ul li {
     left: 0;
     right: 0;
     width: 100%;
+    border-radius: 10px;
 }
 .custom-modal button#closeModal{
     height:40px ;
@@ -131,7 +143,8 @@ form ul li {
 }
 
 .inner-container.left-side button{
-    padding: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
 }
 
 
@@ -146,10 +159,15 @@ form ul li {
     padding: 10px;
     resize: none;
     outline-color: rgb(58, 0, 128);
+    font-size: 20px;
+    border-radius: 10px;
 }
 .inner-container.right-side form button{
     width: 15%;
-    border: none;
+    border: 1px solid black;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
 #deleteProfile {
@@ -159,7 +177,7 @@ form ul li {
 }
 
 #allPostsWrapper .single-post {
-    background-color: #eaeaea;
+    background-color: #bda9c346;
     padding:15px ;
     margin-top: 15px;
     color: #000;
@@ -168,13 +186,14 @@ form ul li {
 #allPostsWrapper .single-post .post-actions{
     display: flex;
     justify-content: space-between;
-    color: gray;
+    color: rgb(255, 255, 255);
 }
 #allPostsWrapper .single-post .post-actions div button.like-btn {
     background-image: url('img/like.png');
     padding: 5px 15px 5px 40px;
     background-repeat: no-repeat;
     background-position: 10px;
+    font-weight: bolder;
 }
 #allPostsWrapper .single-post .post-actions div button.comment-btn {
     background-image: url('img/comment.png');
@@ -182,6 +201,7 @@ form ul li {
     background-repeat: no-repeat;
     background-position: 10px;
     border: 0;
+    font-weight: bolder;
 }
 
 #allPostsWrapper .single-post .post-actions div button.remove-btn {
@@ -192,25 +212,31 @@ padding: 5px 15px
 
 
 #allPostsWrapper .single-post .single-post-content{
-    padding-bottom: 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
     border-bottom: 1px solid black;
     margin-bottom: 10px;
-    font-size: 22px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgba(174, 171, 185, 0.356);
+    border-radius: 5px;
+    padding-left: 20px;
 }
 
 #allPostsWrapper .single-post .post-comments form {
     height: 30px;
-    margin-top: 15px;
+    margin: 15px 0px;
 }
 
 #allPostsWrapper .single-post .post-comments form input{
     width: 85%;
-    padding: 0 10px;
+    padding: 0px 10px;
 }
 
 #allPostsWrapper .single-post .post-comments form button{
     width: 15%;
     background-color: gray;
+    font-size: 18px;
 }
 
 #allPostsWrapper .single-post .post-comments{
@@ -218,12 +244,43 @@ padding: 5px 15px
 }
 
 #allPostsWrapper .single-post .post-comments .single-comment {
-    border: 1px dotted rgb(58, 0, 128);
+    border: 1px dotted rgb(72, 65, 81);
     padding: 10px;
     margin-top: 10px;
+    background-color: rgba(162, 116, 235, 0.817);
 }
 
 .liked {
     border: 1px solid red;
 }
 
+.comments-label{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.welcomeandlogo{
+display: flex;
+justify-content: center;
+text-align: center;
+align-items: center;
+align-content: center;
+margin-bottom: 30px;
+}
+.welcome{
+    font-size: 60px;
+    display: inline-block;
+    margin: 0;
+}
+.welcomeimg{
+    margin-left: 40px;
+}
+.comment_username{
+    font-weight: bolder;
+    color: rgb(48, 9, 102);
+}
+
+#profile_username{
+    font-size: 30px;
+    font-weight: bold;
+}
