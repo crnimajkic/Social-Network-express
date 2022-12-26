@@ -1,6 +1,7 @@
 # Social-Network-express
 
-This is my repository for a project I made to show of my frontend skills and understanding of the backend. Communication to the database and backend API was enabled by using [mockAPI](https://mockapi.io/) platform, but serving of the pages are made using express. Project was done using OOP, and no React or EJS.
+This is my repository for a project I made to show of my frontend skills and understanding of the backend. Communication to the database and backend API was enabled by using the [mockAPI](https://mockapi.io/) platform, but the serving of the pages is made using express. The project was done using OOP, and no React or EJS.
+
 
 ## This app is completely usable SOCIAL NETWORK with fitures such ass specific login, editing username and pasword, creating posts, commenting and liking posts.
 
