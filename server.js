@@ -6,7 +6,9 @@ const cors = require('cors')
 app.use(express.static(__dirname +'/public'))
 app.use(express.urlencoded({ extended: true }))
 
-app.use(cors())
+app.use(cors({
+    origin:["https://hexa-social-network.onrender.com","https://kit.fontawesome.com/a076d05399.js"]
+}))
 
 
 app.get('/', (req, res) => {
