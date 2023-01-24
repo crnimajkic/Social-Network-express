@@ -6,6 +6,9 @@ This is my repository for a project I made to show of my frontend skills and und
 ## This app is completely usable SOCIAL NETWORK with features such ass specific login, editing username and password, creating posts, commenting and liking posts.
 
 
+Try it hosted on [Render](https://hexa-social-network.onrender.com/).
+
+
 Here are the inteface of the login page and registration modal.
 
  ![reg](https://user-images.githubusercontent.com/105221872/209412862-f3374718-7c48-45ad-8bec-88a6710cad7a.png)  ![login](https://user-images.githubusercontent.com/105221872/209412859-9b7c5006-6390-4877-b770-dd35ecc431a7.png)
